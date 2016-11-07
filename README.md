@@ -1,1 +1,0 @@
-# INFO4042_poinsignon_teissier
