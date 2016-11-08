@@ -4,6 +4,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +17,13 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView tv_hw = (TextView)findViewById(R.id.tv_hello_world);
+
+        /*long date = System.currentTimeMillis();
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM MM dd,yyyy h:mm a");
+        String dateString = sdf.format(date);*/
+        GetBiersServices.startActionGetAllBiers(this);
+
     }
 
     @Override
