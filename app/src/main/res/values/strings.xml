@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">OneCloud</string>
 
+
+
+    <string name="FAQ">FAQ</string>
+    <string name="welcome">WELCOME</string>
+
+    <string name="type_meal">CHOOSE A TYPE OF MEAL</string>
+    <string name="button_next">Next</string>
+
+
+
+
     <string name="hello_world">Available cloud!</string>
     <string name="action_settings">Settings</string>
     <string name="button_text">Click</string>
@@ -19,7 +30,7 @@
     <string name="available">Product available</string>
     <string name="addedMessage">added to your cloud  !</string>
     <string name="addMessage">Add to your cloud  ?</string>
-    <string name="FAQ">FAQ</string>
+
 
 
 
