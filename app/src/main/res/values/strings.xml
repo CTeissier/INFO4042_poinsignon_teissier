@@ -12,7 +12,9 @@
     <string name="empty_sub">My cloud is empty !</string>
 
 
-    <string name="Sug">Suggest a cloud</string>
+    <string name="restaurant_menu">Demander la carte du restaurant</string>
+
+
     <string name="Unavailable">Product unavailable</string>
     <string name="available">Product available</string>
     <string name="addedMessage">added to your cloud  !</string>
@@ -30,5 +32,40 @@
     <string name="button_order">Order cloud</string>
     <string name="title_help_activity">FAQ</string>
     <string name="title_reco">Trending cloud </string>
+
+
+
+    <string-array name="medication">
+        <item>Aspirine</item>
+        <item>Pastille pour la gorge</item>
+
+    </string-array>
+
+
+    <string name="dell">You chose Dell.</string>
+
+    <string-array name="delivery_type">
+        <item>Retrait en magasin</item>
+        <item>Livraison en deux jours</item>
+
+    </string-array>
+
+
+    <string-array name="core_type">
+        <item>i3</item>
+        <item>i5</item>
+        <item>i7</item>
+
+    </string-array>
+
+
+    <string-array name="screen_size">
+        <item>15,4"</item>
+        <item>17"</item>
+        <item>13"</item>
+
+
+    </string-array>
+
 
 </resources>

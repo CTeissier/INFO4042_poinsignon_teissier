@@ -29,7 +29,7 @@ public class NavigationDrawerFragment extends Fragment {
     public static final String KEY_USER_LEARNED_DRAWER="user_learned_drawer";
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
-    private BiersAdapter adapter;
+    private CarAdapter adapter;
     private boolean mUserLearnedDrawer;
     private boolean mFromSavedInstanceState;
     private View containerView;
@@ -54,7 +54,7 @@ public class NavigationDrawerFragment extends Fragment {
         View layout=inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
 
         recyclerView = (RecyclerView)layout.findViewById(R.id.rev_biere);
-        adapter=new BiersAdapter(getActivity(),getData());
+        adapter=new CarAdapter(getActivity(),getData());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return layout;

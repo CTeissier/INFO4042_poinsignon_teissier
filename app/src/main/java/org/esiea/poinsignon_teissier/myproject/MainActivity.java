@@ -3,7 +3,6 @@ package org.esiea.poinsignon_teissier.myproject;
 import android.app.DatePickerDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
@@ -27,15 +26,14 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import android.widget.Button;
+import android.widget.ImageButton;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -43,13 +41,14 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private static final String TAG = "GetBiersServices";
+    private static final String TAG = "GetCarServices";
     private JSONArray json;
     private RecyclerView rev_bieres = null;
     private DatePickerDialog dpd = null;
     private AlertDialog.Builder ad = null;
     private AlertDialog alertDialog = null;
+
+    String lastSelectedCountry = "Sea";
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -62,8 +61,34 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        Button next = (Button) findViewById(R.id.button);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Medication.class);
+                i.putExtra("country", lastSelectedCountry);
+                startActivity(i);
+
+            }
+        });
+
+        ImageButton button = (ImageButton) findViewById(R.id.imageButton);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),R.string.dell, Toast.LENGTH_SHORT).show();
+                lastSelectedCountry = "Dell";
+            }
+
+        });
+
+
+
+
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
@@ -72,52 +97,21 @@ public class MainActivity extends AppCompatActivity {
         TextView btn_hw = (TextView) findViewById(R.id.btn_hello_world);
         getString(R.string.hello_world);
 
-        GetBiersServices.startActionGet_All_Biers(this);
+        GetCarServices.startActionGet_All_Biers(this);
 
         rev_bieres = (RecyclerView) findViewById(R.id.rev_biere);
         rev_bieres.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         rev_bieres.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rev_bieres, new ClickListener() {
 
-
-
             @Override
-            public void onClick(View view, int position) {/*
-                if (position == 2 || position == 3 || position == 5 || position == 7 || position == 11 || position == 13 || position == 17 || position == 19 || position == 23 || position == 29 || position == 31 || position == 37 || position == 41 || position == 43 || position == 47 || position == 53 || position == 59 || position == 61 || position == 67 || position == 71 || position == 73 || position == 79 || position == 83 || position == 89 || position == 97) {
-                    Toast.makeText(MainActivity.this, "n°" + position + " " + getString(R.string.Unavailable), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this, "n°" + position + " " + getString(R.string.available), Toast.LENGTH_SHORT).show();
-                }
+            public void onClick(View view, int position) {
 
-*/
             }
 
 
             @Override
-            public void onLongClick(View view, final int position) {/*
-
-                if (position == 2 || position == 3 || position == 5 || position == 7 || position == 11 || position == 13 || position == 17 || position == 19 || position == 23 || position == 29 || position == 31 || position == 37 || position == 41 || position == 43 || position == 47 || position == 53 || position == 59 || position == 61 || position == 67 || position == 71 || position == 73 || position == 79 || position == 83 || position == 89 || position == 97) {
-                    Toast.makeText(MainActivity.this, "n°" + position + " " + getString(R.string.Unavailable), Toast.LENGTH_SHORT).show();
-                } else {
-                    new AlertDialog.Builder(MainActivity.this)
-                            .setTitle("Validation")
-                            .setMessage(getString(R.string.addMessage))
-                            .setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    Toast.makeText(MainActivity.this, "n°" + position + " " + getString(R.string.addedMessage), Toast.LENGTH_SHORT).show();
-
-                                }
-                            })
-                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    Toast.makeText(MainActivity.this, "" + getString(R.string.msg2), Toast.LENGTH_SHORT).show();
-                                }
-                            })
-                            .show();
-
-                }*/
+            public void onLongClick(View view, final int position) {
             }
-
-
 
 
         }));
@@ -138,17 +132,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-      /*  ad = new AlertDialog.Builder(this).setTitle("Validation").setMessage("Souhaitez-vous valider cette action ?").setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getApplicationContext(), getString(R.string.msg), Toast.LENGTH_LONG).show();
-            }
-        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getApplicationContext(), getString(R.string.msg2), Toast.LENGTH_LONG).show();
-            }
-        }).setIcon(android.R.drawable.ic_dialog_alert);*/
-
-
 
         final FrameLayout frameView = new FrameLayout(this);
         ad.setView(frameView);
@@ -160,10 +143,7 @@ public class MainActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
-
-
-
-    }
+    }//End of OnCreate
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -189,6 +169,14 @@ public class MainActivity extends AppCompatActivity {
         if (id == android.R.id.home) {
             NavUtils.navigateUpFromSameTask(this);
         }
+    /*
+        if (id == R.id.buttonjson) {
+            Intent second= new Intent(this, SecondeActivity.class);
+            startActivity(second);
+            return true;
+        }
+*/
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -235,9 +223,6 @@ public class MainActivity extends AppCompatActivity {
         client.disconnect();
     }
 
-
-
-
     public class BierUpdate extends BroadcastReceiver {
 
         @Override
@@ -249,7 +234,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public JSONArray getBiersFromFile() { //enregistre un jsonarray avec le contenu du lien
+    public JSONArray getBiersFromFile() {
         try {
             InputStream is = new FileInputStream(getCacheDir() + "/" + "bieres.json");
             byte[] buffer = new byte[is.available()];
@@ -274,13 +259,9 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public BierHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-
             LayoutInflater li = LayoutInflater.from(viewGroup.getContext());
-
             View v = li.inflate(R.layout.rv_bier_element, viewGroup, false);
-
             return new BierHolder(v);
-
         }
 
         @Override

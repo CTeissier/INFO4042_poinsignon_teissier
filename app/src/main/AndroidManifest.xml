@@ -23,7 +23,7 @@
         </activity>
 
         <service
-            android:name=".GetBiersServices"
+            android:name=".GetCarServices"
             android:exported="false" >
         </service>
         <!--

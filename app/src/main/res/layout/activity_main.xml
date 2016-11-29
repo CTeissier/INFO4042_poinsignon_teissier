@@ -70,4 +70,6 @@ app:layout="@layout/fragment_navigation_drawer"
 android:name="org.esiea.poinsignon_teissier.myproject.NavigationDrawerFragment"
 tools:layout="@layout/fragment_navigation_drawer" />
 
+    <include layout="@layout/content_main" />
+
 </android.support.v4.widget.DrawerLayout>
