@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    String lastSelectedCountry = "Sea";
+    String typeemergency = "None";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,17 +20,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
         Button next = (Button) findViewById(R.id.button);
 
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), DeliveryForm.class);
+                i.putExtra("emergency", typeemergency);
+                startActivity(i);
+
+            }
+        });
 
         ImageButton button = (ImageButton) findViewById(R.id.imageButton);
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.spain, Toast.LENGTH_SHORT).show();
-                lastSelectedCountry = "Test1";
+                Toast.makeText(getApplicationContext(), R.string.police, Toast.LENGTH_SHORT).show();
+                typeemergency = "Police";
             }
 
         });
@@ -39,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.morocco, Toast.LENGTH_SHORT).show();
-                lastSelectedCountry = "Test2";
+                Toast.makeText(getApplicationContext(), R.string.firefighter, Toast.LENGTH_SHORT).show();
+                typeemergency = "Firefighter";
             }
 
         });
@@ -49,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.tunisia, Toast.LENGTH_SHORT).show();
-                lastSelectedCountry = "Test3";
+                Toast.makeText(getApplicationContext(), R.string.doctor, Toast.LENGTH_SHORT).show();
+                typeemergency = "Doctor";
             }
 
         });
@@ -59,65 +66,15 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.china, Toast.LENGTH_SHORT).show();
-                lastSelectedCountry = "Test4";
+                Toast.makeText(getApplicationContext(), R.string.plumber, Toast.LENGTH_SHORT).show();
+                typeemergency = "Plumber";
             }
 
         });
 
-        ImageButton button5 = (ImageButton) findViewById(R.id.imageButton5);
-        button5.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.south_africa, Toast.LENGTH_SHORT).show();
-                lastSelectedCountry = "Test5";
-            }
-
-        });
-
-        ImageButton button6 = (ImageButton) findViewById(R.id.imageButton6);
-        button6.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.portugal, Toast.LENGTH_SHORT).show();
-                lastSelectedCountry = "Test6";
-            }
-        });
-
-        ImageButton button7 = (ImageButton) findViewById(R.id.imageButton6);
-        button6.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.portugal, Toast.LENGTH_SHORT).show();
-                lastSelectedCountry = "Test7";
-            }
-        });
-
-        ImageButton button8 = (ImageButton) findViewById(R.id.imageButton6);
-        button6.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.portugal, Toast.LENGTH_SHORT).show();
-                lastSelectedCountry = "Test8";
-            }
-        });
-
-        ImageButton button9 = (ImageButton) findViewById(R.id.imageButton6);
-        button6.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.portugal, Toast.LENGTH_SHORT).show();
-                lastSelectedCountry = "Test9";
-            }
-        });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

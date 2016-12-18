@@ -67,45 +67,6 @@ public class SecondActivity extends AppCompatActivity {
         notifmanager.cancel(ID);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_seconde, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        switch (item.getItemId()) {
-
-            case R.id.change_date:
-                Toast.makeText(getApplicationContext(), getString(R.string.msg), Toast.LENGTH_LONG).show();
-                dpd.show();
-                return true;
-
-            case R.id.action_notification:
-                NotificationCompat.Builder wat =
-                        new NotificationCompat.Builder(this)
-                                .setSmallIcon(R.mipmap.ic_launcher)
-                                .setContentTitle("CLICK THAT")
-                                .setContentText(getString(R.string.notification_example));
-                NotificationManager manager = ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE));
-                manager.notify(1, wat.build());
-                return true;
-
-            case R.id.action_toast:
-                Toast.makeText(getApplicationContext(), getString(R.string.toast_example), Toast.LENGTH_LONG).show();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
     public void notification() {
         NotificationCompat.Builder wat =
                 new NotificationCompat.Builder(this)

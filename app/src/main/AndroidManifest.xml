@@ -24,6 +24,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".NotificationPush"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DeliveryForm" />
         <activity android:name=".SecondActivity" />
 
         <service
