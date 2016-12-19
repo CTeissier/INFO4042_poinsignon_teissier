@@ -15,7 +15,6 @@
     <string name="adress">Adresse</string>
     <string name="button_confirm">Confirmer</string>
     <string name="ok">Accepter</string>
-    <string name="checkbox_response">Confirmation par SMS ?</string>
 
 
     <string name="dialog_title">Attention, les secours vont être alertés</string>
