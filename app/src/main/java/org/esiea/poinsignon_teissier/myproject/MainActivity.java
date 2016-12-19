@@ -82,12 +82,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -105,12 +100,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
-
-
 
 
     @Override

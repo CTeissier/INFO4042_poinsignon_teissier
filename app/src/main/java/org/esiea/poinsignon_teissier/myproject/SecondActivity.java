@@ -14,13 +14,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,8 +38,8 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        GetBiersService.startActionGetAllBiers(this);
-        IntentFilter intentFilter = new IntentFilter(BIERS_UPDATE);
+        GetInformationsService.startActionGetAllBiers(this);
+        IntentFilter intentFilter = new IntentFilter(INFORMATION_UPDATE);
         LocalBroadcastManager.getInstance(this).registerReceiver(new BierUpdate(), intentFilter);
         rv = (RecyclerView) findViewById(R.id.rv_biere);
         rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -70,14 +67,14 @@ public class SecondActivity extends AppCompatActivity {
     public void notification() {
         NotificationCompat.Builder wat =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setSmallIcon(R.drawable.emergencycall)
                         .setContentTitle("Notification")
                         .setContentText(getString(R.string.endDL));
         NotificationManager manager = ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE));
         manager.notify(1, wat.build());
     }
 
-    public static final String BIERS_UPDATE = "org.esiea.poinsignon_teisser.myproject.action.BIERS_UPDATE";
+    public static final String INFORMATION_UPDATE = "org.esiea.poinsignon_teisser.myproject.action.INFORMATION_UPDATE";
 
     public class BierUpdate extends BroadcastReceiver {
         @Override
