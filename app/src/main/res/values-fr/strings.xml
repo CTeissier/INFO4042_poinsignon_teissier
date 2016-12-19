@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">May day</string>
+    <string name="homepage">Selectionner votre type d\'urgence</string>
+    <string name="button_next">Suivant</string>
+
+    <string name="police">Appeler la police</string>
+    <string name="firefighter">Appeler les pompiers</string>
+    <string name="doctor">Appeler une ambulance</string>
+    <string name="plumber">Appeler un plombier</string>
+
+    <string name="first_name">Prénom</string>
+    <string name="last_name">Nom de famille</string>
+    <string name="phone">Numéro de téléphone</string>
+    <string name="adress">Adresse</string>
+    <string name="button_confirm">Confirmer</string>
+    <string name="ok">Accepter</string>
+    <string name="checkbox_response">Confirmation par SMS ?</string>
+
+
+    <string name="dialog_title">Attention, les secours vont être alertés</string>
+    <string name="dialog_msg">Confirmez-vous votre choix ?</string>
+
+    <string name="biere">Télécharger les informations utiles</string>
+    <string name="telecharger">Voir le status de mon appel</string>
+
+    <string name="action_settings">Paramètres</string>
+
+    <string name="notification_example">Les secours sont en routes</string>
+    <string name="endDL">Restez calme</string>
+    <string name="menu_notification">Les secours sont en route</string>
+
+
+    <string name="valuepolice">Police</string>
+    <string name="valuedoctor">Docteur</string>
+    <string name="valueplumber">Plombier</string>
+    <string name="valuefirefighter">Pompier</string>
+
+</resources>

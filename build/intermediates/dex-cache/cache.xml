@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_4d427d16a6f802441704763e47db287535b5cf5a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.1.0_01561032254b6417a3821bcf90c6f41822545a42\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.1_4218c9dd161877b604bdbe8c94bc3b0f1c7565e5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="703bc60c09423217172fb78566e80416a3416601">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_70d14cce6f8dbb1d59c744b983dc8229f300df4f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.1_c627533a4bccc6072c10c7cb013fc3a21c4f448e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_5ec14f37ee0529d13a83359602043c67faf8ce1b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="12a1569a9c5e47218d11fa9d36eaa7f6e000e11d">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f44cc54a73b29d4e0e8aa0da92b1800880f11865\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_2d78f3b39540dca15b8c3fb2e590af03877159c8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.1.0_96a99c65e820209db20cf0db2df5148ba7a242e7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\danie\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Coding\INFO4042_poinsignon_teissier\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_5549022c58a49c80dcd91a230bd3ae3edfe857f5\classes.dex" />
+    </item>
+
+</items>
