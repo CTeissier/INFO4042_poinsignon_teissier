@@ -6,7 +6,7 @@ L’application mobile donne la possibilité aux utilisateurs de signaler une ur
 
 ## Nota Bene
 
-Le Json est modifié à partir de celui des bières, il a été uploader sur sur une plateforme http://myjson.com et contient l’adresse des hôpitaux, commissariat et station de pompier dans les environs. Tous fonctionnent parfaitement, mais si pour une raison inconnue le Json n’est pas accessible via l’URL. L’utilisation dans GetInformationSService de l’URL http://binouze.fabrigli.fr/bieres.json.
+Le Json est modifié à partir de celui des bières, il a été uploader sur sur une plateforme http://myjson.com et contient l’adresse des hôpitaux, commissariat et station de pompier dans les environs. Tous fonctionnent parfaitement, mais si pour une raison inconnue le Json n’est pas accessible via l’URL. L’utilisation dans GetInformationSService de l’URL http://binouze.fabrigli.fr/bieres.json peut remédier au problème.
 
 ## Fonctionnalités
 
